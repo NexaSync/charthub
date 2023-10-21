@@ -76,4 +76,4 @@ BarChart(size: 200, items: [100, 40, 300, 50, 450]),
 
 ## Additional Details
 
-for more details visit example page or contact on <a href="https://www.linkedin.com/company/nexasync-solutions/">Instagram</a>
+for more details visit example page or contact on <a href="https://www.linkedin.com/company/nexasync-solutions/">LinkedIn</a>

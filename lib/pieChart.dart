@@ -74,27 +74,29 @@ class PieChartPainter extends CustomPainter {
     lastLocation = 0;
 
     //Showing Values on Pie Chart
-    for (int i = 0; i < items.length; i++) {
-      double segmentArea = (((pi * 2) / maxNumber) * items[i]);
-      double sweepAngleBlue = segmentArea; // Half of the circle
+    if (showValues ?? true) {
+      for (int i = 0; i < items.length; i++) {
+        double segmentArea = (((pi * 2) / maxNumber) * items[i]);
+        double sweepAngleBlue = segmentArea; // Half of the circle
 
-      // Calculate position for the text label
-      final labelX =
-          centerX + radius * 0.8 * cos(lastLocation + sweepAngleBlue / 2);
-      final labelY =
-          centerY + radius * 0.8 * sin(lastLocation + sweepAngleBlue / 2);
-      final label = '${items[i]}';
-      final textPainter = TextPainter(
-        text: TextSpan(
-          text: label,
-          style: textStyle ?? TextStyle(color: Colors.white),
-        ),
-        textDirection: TextDirection.ltr,
-      );
-      textPainter.layout();
-      textPainter.paint(canvas, Offset(labelX, labelY));
+        // Calculate position for the text label
+        final labelX =
+            centerX + radius * 0.8 * cos(lastLocation + sweepAngleBlue / 2);
+        final labelY =
+            centerY + radius * 0.8 * sin(lastLocation + sweepAngleBlue / 2);
+        final label = '${items[i]}';
+        final textPainter = TextPainter(
+          text: TextSpan(
+            text: label,
+            style: textStyle ?? TextStyle(color: Colors.white),
+          ),
+          textDirection: TextDirection.ltr,
+        );
+        textPainter.layout();
+        textPainter.paint(canvas, Offset(labelX, labelY));
 
-      lastLocation = segmentArea + lastLocation;
+        lastLocation = segmentArea + lastLocation;
+      }
     }
   }
 

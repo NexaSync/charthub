@@ -5,17 +5,15 @@ class LineChart extends StatelessWidget {
   final double size;
   final List<double> items;
   final Color? color;
-  final double? fontSize;
   final bool? showValues;
-  final FontWeight? fontWeight;
+  final TextStyle? textStyle;
 
   LineChart(
       {required this.size,
       required this.items,
       this.color,
-      this.fontSize,
       this.showValues,
-      this.fontWeight});
+      this.textStyle});
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -25,8 +23,7 @@ class LineChart extends StatelessWidget {
             items: items,
             color: color,
             showValues: showValues,
-            fontSize: fontSize,
-            fontWeight: fontWeight),
+            textStyle: textStyle),
       ),
     );
   }
@@ -36,16 +33,11 @@ class GraphBorderPainter extends CustomPainter {
   final ExtendedMethods extendedMethods = ExtendedMethods();
   final List<double> items;
   final Color? color;
-  final double? fontSize;
   final bool? showValues;
-  final FontWeight? fontWeight;
+  final TextStyle? textStyle;
 
   GraphBorderPainter(
-      {required this.items,
-      this.color,
-      this.showValues,
-      this.fontSize,
-      this.fontWeight});
+      {required this.items, this.color, this.showValues, this.textStyle});
 
   List<double> lastLinePoints = [];
 
@@ -77,10 +69,9 @@ class GraphBorderPainter extends CustomPainter {
       final textPainter = TextPainter(
         text: TextSpan(
           text: '${items[i - 1]}',
-          style: TextStyle(
-              color: clr,
-              fontSize: fontSize ?? 10,
-              fontWeight: fontWeight ?? FontWeight.normal),
+          style: textStyle ??
+              TextStyle(
+                  color: clr, fontSize: 10, fontWeight: FontWeight.normal),
         ),
         textDirection: TextDirection.ltr,
       );

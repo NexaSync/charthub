@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:charthub/Methods/extended-methods.dart';
 import 'package:flutter/material.dart';
 
 class LineChart extends StatelessWidget {
@@ -33,24 +34,8 @@ class LineChart extends StatelessWidget {
   }
 }
 
-Color getRandomDarkColor(int index) {
-  final List<Color> colorList = [
-    Colors.red,
-    Colors.green,
-    Colors.pink,
-    Colors.cyan,
-    Colors.blueGrey,
-    Colors.deepOrange,
-    Colors.blue,
-    Colors.purple,
-    Colors.indigo
-  ];
-
-  final selectedColorIndex = index % colorList.length;
-  return colorList[selectedColorIndex];
-}
-
 class GraphBorderPainter extends CustomPainter {
+  ExtendedMethods extendedMethods = ExtendedMethods();
   List<double> items;
   Color? color;
   double? fontSize;
@@ -89,7 +74,7 @@ class GraphBorderPainter extends CustomPainter {
     canvas.drawLine(startPoint, endPoint, paint);
 
     for (int i = 1; i <= items.length; i++) {
-      Color clr = color ?? getRandomDarkColor(i - 1);
+      Color clr = color ?? extendedMethods.getRandomDarkColor(i - 1);
       paint.color = clr;
       final textPainter = TextPainter(
         text: TextSpan(

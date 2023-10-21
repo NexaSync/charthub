@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:charthub/Methods/extended-methods.dart';
 import 'package:flutter/material.dart';
 
 class BarChart extends StatelessWidget {
@@ -33,24 +34,8 @@ class BarChart extends StatelessWidget {
   }
 }
 
-Color getRandomDarkColor(int index) {
-  final List<Color> colorList = [
-    Colors.red,
-    Colors.green,
-    Colors.pink,
-    Colors.cyan,
-    Colors.blueGrey,
-    Colors.deepOrange,
-    Colors.blue,
-    Colors.purple,
-    Colors.indigo
-  ];
-
-  final selectedColorIndex = index % colorList.length;
-  return colorList[selectedColorIndex];
-}
-
 class GraphBorderPainter extends CustomPainter {
+  ExtendedMethods extendedMethods = ExtendedMethods();
   List<double> items;
   Color? color;
   double? fontSize;
@@ -96,7 +81,7 @@ class GraphBorderPainter extends CustomPainter {
         ),
         textDirection: TextDirection.ltr,
       );
-      paint.color = color ?? getRandomDarkColor(i - 1);
+      paint.color = color ?? extendedMethods.getRandomDarkColor(i - 1);
       double itemHeight =
           size.height - ((size.height) / maxNumber) * items[i - 1];
 

@@ -71,16 +71,12 @@ BarChart(size: 200, items: [100, 40, 300, 50, 450]),
 
 <H3>NexaSync</H3>
 <p>At NexaSync, we empower businesses to thrive in the digital age through cutting-edge application and website development solutions. With over two years of dedicated expertise in this field, we are your trusted technology partner.</p>
-<p>Founded by Bilal Mohammad, Rajkumar Lohar & Gajendra Menaria</p>
 
 ## Contact Us
 
 <p>LinedIn: <a href="https://www.linkedin.com/company/nexasync-solutions/">Connect With Us</a></p>
 <p>Email: <a href="mailto:info.nexasync@gmail.com">Send Email</a>
 
-## Special Thanks
-<h3>Designed & Developed by <a href="https://www.instagram.com/gajendra_menaria9/">Gajendra Menaria</a></h3>
-
 ## Additional Details
 
-for more details visit example page or contact on <a href="https://www.linkedin.com/company/nexasync-solutions/">LinkedIn</a>
+for Additional queries visit example page or contact on <a href="https://www.linkedin.com/company/nexasync-solutions/">LinkedIn</a>

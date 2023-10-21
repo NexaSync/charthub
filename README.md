@@ -17,27 +17,14 @@ To use this package, add <b>charthub</b> as a dependency in your pubspec.yaml fi
 ## Features
 
 <ul>
-<li><b>Single tick checkbox</b>
-<ul>
-    <li>set 'selectOneToAll' property 'false' to select only one at a time</li>
+  <li>Easy-to-Use: Quickly integrate beautiful charts into your app.</li>
+  <li>Chart Types: Select from Line Chart, Bar Chart, or Pie Chart.</li>
+  <li>Data Visualization: Turn your data into compelling visuals.</li>
+  <li>Customization: Customize your charts to match your app's look and feel.</li>
+  <li>Animations (Coming Soon): Enhance user engagement with chart animations.</li>
+  <li>Future-Proof: As we continue to expand, you'll have access to even more powerful charting features.</li>
 </ul>
-</li>
-<li><b>Multi select checkbox</b>
-<ul>
-<li>set 'selectOneToAll' property 'true' to select all children</li>
-<li>get all node details in onChecked()</li>
-</ul>
-</li>
-<li><b>change the colors of checkbox</b></li>
-<li><b>change the colors of text</b></li>
-<li><b>onChecked function provides the value</b>
-<ul>
-<li><b>node:</b> all child values and current selected node values</li>
-<li><b>checked:</b> provides the bool value that the checkbox is checked or not</li>
-<li><b>commonID:</b> returns the common id when selectOneToAll is true</li>
-</ul>
-</li>
-</ul>
+
 
 ## Getting started
 

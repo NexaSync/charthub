@@ -35,7 +35,7 @@ Follow this steps to use this package
 ## Install
 
 ```html
-charthub: 0.0.1
+charthub: 0.0.2
 ```
 
 ## Import package

@@ -1,15 +1,13 @@
-import 'dart:math';
-
-import 'package:charthub/Methods/extended-methods.dart';
+import 'package:charthub/Methods/extended_methods.dart';
 import 'package:flutter/material.dart';
 
 class LineChart extends StatelessWidget {
-  double size;
-  List<double> items;
-  Color? color;
-  double? fontSize;
-  bool? showValues;
-  FontWeight? fontWeight;
+  final double size;
+  final List<double> items;
+  final Color? color;
+  final double? fontSize;
+  final bool? showValues;
+  final FontWeight? fontWeight;
 
   LineChart(
       {required this.size,
@@ -35,12 +33,12 @@ class LineChart extends StatelessWidget {
 }
 
 class GraphBorderPainter extends CustomPainter {
-  ExtendedMethods extendedMethods = ExtendedMethods();
-  List<double> items;
-  Color? color;
-  double? fontSize;
-  bool? showValues;
-  FontWeight? fontWeight;
+  final ExtendedMethods extendedMethods = ExtendedMethods();
+  final List<double> items;
+  final Color? color;
+  final double? fontSize;
+  final bool? showValues;
+  final FontWeight? fontWeight;
 
   GraphBorderPainter(
       {required this.items,

@@ -1,14 +1,14 @@
 import 'dart:math';
 
-import 'package:charthub/Methods/extended-methods.dart';
+import 'package:charthub/Methods/extended_methods.dart';
 import 'package:flutter/material.dart';
 
 class PieChart extends StatelessWidget {
-  double size;
-  List<double> items;
-  Color? color;
-  bool? showValues;
-  TextStyle? textStyle;
+  final double size;
+  final List<double> items;
+  final Color? color;
+  final bool? showValues;
+  final TextStyle? textStyle;
 
   PieChart(
       {required this.size,
@@ -31,12 +31,11 @@ class PieChart extends StatelessWidget {
 }
 
 class PieChartPainter extends CustomPainter {
-  ExtendedMethods extendedMethods = ExtendedMethods();
-
-  List<double> items;
-  Color? color;
-  bool? showValues;
-  TextStyle? textStyle;
+  final ExtendedMethods extendedMethods = ExtendedMethods();
+  final List<double> items;
+  final Color? color;
+  final bool? showValues;
+  final TextStyle? textStyle;
 
   PieChartPainter(
       {required this.items, this.color, this.showValues, this.textStyle});
@@ -77,7 +76,6 @@ class PieChartPainter extends CustomPainter {
     //Showing Values on Pie Chart
     for (int i = 0; i < items.length; i++) {
       double segmentArea = (((pi * 2) / maxNumber) * items[i]);
-      double startAngleBlue = lastLocation; // Start at the bottom
       double sweepAngleBlue = segmentArea; // Half of the circle
 
       // Calculate position for the text label

@@ -1,5 +1,7 @@
 <h2>ChartHub</h2>
 Create stunning and interactive charts in your Flutter apps effortlessly with the Charthub package. Choose from three chart types - Line Chart, Bar Chart, and Pie Chart - and bring your data to life. Charthub makes charting simple and flexible, so you can focus on delivering meaningful insights to your users.
+<br>
+<p>We will also add animations in future to make it more attractive.</p>
 
 ## Usage
 
@@ -33,134 +35,45 @@ Follow this steps to use this package
 ## Install
 
 ```html
-generate_tree: ^1.0.7
+charthub: 0.0.1
 ```
 
 ## Import package
 
 ```dart
-import 'generate_tree/generate_tree.dart';
+import 'package:charthub/pieChart.dart';
+import 'package:charthub/lineChart.dart';
+import 'package:charthub/barChart.dart';
 ```
 
-first you will need a data list:
+No need to do anything, just pass your graph size and the list of values it will generate Chart itself.
 
+Do this for Line Chart:
 ```dart
-final List data = [
-      {
-        "checked": true,
-        "children": [
-          {
-            "checked": true,
-            "show": false,
-            "children": [],
-            "id": 11,
-            "pid": 1,
-            "commonID": 1,
-            "title": "Child title 11"
-          }
-        ],
-        "id": 1,
-        "pid": 0,
-        "commonID": 1,
-        "show": false,
-        "title": "Parent title 1"
-      },
-      {
-        "checked": true,
-        "show": false,
-        "children": [],
-        "id": 2,
-        "commonID": 2,
-        "pid": 0,
-        "title": "Parent title 2"
-      },
-      {
-        "checked": true,
-        "children": [
-          {
-            "checked": true,
-            "children": [],
-            "id": 31,
-            "commonID": 3,
-            "pid": 3,
-            "show": false,
-            "title": "Parent title 3.1"
-          },
-          {
-            "checked": true,
-            "children": [
-              {
-                "checked": true,
-                "children": [],
-                "id": 311,
-                "commonID": 3,
-                "pid": 31,
-                "show": false,
-                "title": "Parent title 3.1.1"
-              },
-              {
-                "checked": true,
-                "children": [],
-                "id": 312,
-                "commonID": 3,
-                "pid": 31,
-                "show": false,
-                "title": "Parent title 3.1.2"
-              }
-            ],
-            "id": 32,
-            "commonID": 3,
-            "pid": 2,
-            "show": false,
-            "title": "Parent title 3.2"
-          }
-        ],
-        "id": 3,
-        "commonID": 3,
-        "pid": 0,
-        "show": false,
-        "title": "Parent title 3"
-      }
-    ];
+LineChart(
+size: 200,
+items: [23, 45, 12, 60, 44, 10, 54, 34, 23]),
 ```
 
-then pass the data to TreeNode.fromJson() to get the List<TreeNode>
+Do this for Pie Chart:
 
 ```dart
-final List<TreeNode> treeNodes =
-        data.map((item) => TreeNode.fromJson(item)).toList();
+PieChart(
+size: 200, items: [30, 22, 43, 12, 56, 70]),
 ```
 
-Now pass this treeNodes to GenerateTree(data: treeNodes) to generate the tree
-
+Do this for Bar Chart:
 ```dart
-Widget build(BuildContext context) {
-  return Scaffold(
-    appBar: AppBar(
-      title: Text('Generate Tree'),
-    ),
-    body: GenerateTree(
-      data: treeNodes,
-      selectOneToAll: false,
-      textColor: Colors.blue,
-      onChecked: (node, checked, commonID) {
-        print('isChecked : $checked');
-        print('common Node ID : ${commonID}');
-        print(
-            'children node data : ${node.children.map((e) => '${e.title}')}');
-      },
-      checkBoxColor: Colors.blue,
-      childrenPadding: EdgeInsets.only(left: 40, top: 0, right: 0, bottom: 0),
-    ),
-  );
-}
+BarChart(size: 200, items: [100, 40, 300, 50, 450]),
 ```
 
 ## Developer
 
-<H3>Gajendra Somawat</H3>
-<p>Instagram: <a href="https://www.instagram.com/gajendra_menaria9">gajendra_menaria9</a></p>
+<H3>NexaSync</H3>
+<p>LinedIn: <a href="https://www.linkedin.com/company/nexasync-solutions/">Connect With Us</a></p>
+<p>Email: <a href="mailto:info.nexasync@gmail.com">Send Email</a>
+
 
 ## Additional Details
 
-for more details visit example page or contact on <a href="https://www.instagram.com/gajendra_menaria9">Instagram</a>
+for more details visit example page or contact on <a href="https://www.linkedin.com/company/nexasync-solutions/">Instagram</a>

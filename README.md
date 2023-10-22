@@ -27,7 +27,6 @@ To use this package, add <b>charthub</b> as a dependency in your pubspec.yaml fi
   <li>Future-Proof: As we continue to expand, you'll have access to even more powerful charting features.</li>
 </ul>
 
-
 ## Getting started
 
 Follow this steps to use this package
@@ -49,6 +48,7 @@ import 'package:charthub/barChart.dart';
 No need to do anything, just pass your graph size and the list of values.
 
 Line Chart:
+
 ```dart
 LineChart(
 size: 200,
@@ -63,6 +63,7 @@ size: 200, items: [30, 22, 43, 12, 56, 70]),
 ```
 
 Bar Chart:
+
 ```dart
 BarChart(size: 200, items: [100, 40, 300, 50, 450]),
 ```
@@ -74,9 +75,9 @@ BarChart(size: 200, items: [100, 40, 300, 50, 450]),
 
 ## Contact Us
 
-<p>LinekdIn: <a href="https://www.linkedin.com/company/nexasync-solutions/">NexaSync Solutions</a></p>
+<p>LinkedIn: <a href="https://www.linkedin.com/company/nexasync-solutions/">NexaSync Solutions</a></p>
 <p>Email: <a href="mailto:info.nexasync@gmail.com">info.nexasync@gmail.com</a>
 
 ## Additional Details
 
-for Additional queries visit example page or contact on <a href="https://www.linkedin.com/company/nexasync-solutions/">LinkedIn</a>
+for Additional queries visit example page or contact on <a href="https://www.linkedin.com/company/nexasync-solutions/">NexaSync Solutions</a>

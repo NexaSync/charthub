@@ -35,7 +35,7 @@ Follow this steps to use this package
 ## Install
 
 ```html
-charthub: 0.0.2
+charthub: 1.0.0
 ```
 
 ## Import package
@@ -46,23 +46,23 @@ import 'package:charthub/lineChart.dart';
 import 'package:charthub/barChart.dart';
 ```
 
-No need to do anything, just pass your graph size and the list of values it will generate Chart itself.
+No need to do anything, just pass your graph size and the list of values.
 
-Do this for Line Chart:
+Line Chart:
 ```dart
 LineChart(
 size: 200,
 items: [23, 45, 12, 60, 44, 10, 54, 34, 23]),
 ```
 
-Do this for Pie Chart:
+Pie Chart:
 
 ```dart
 PieChart(
 size: 200, items: [30, 22, 43, 12, 56, 70]),
 ```
 
-Do this for Bar Chart:
+Bar Chart:
 ```dart
 BarChart(size: 200, items: [100, 40, 300, 50, 450]),
 ```
@@ -74,8 +74,8 @@ BarChart(size: 200, items: [100, 40, 300, 50, 450]),
 
 ## Contact Us
 
-<p>LinedIn: <a href="https://www.linkedin.com/company/nexasync-solutions/">Connect With Us</a></p>
-<p>Email: <a href="mailto:info.nexasync@gmail.com">Send Email</a>
+<p>LinekdIn: <a href="https://www.linkedin.com/company/nexasync-solutions/">NexaSync Solutions</a></p>
+<p>Email: <a href="mailto:info.nexasync@gmail.com">info.nexasync@gmail.com</a>
 
 ## Additional Details
 
